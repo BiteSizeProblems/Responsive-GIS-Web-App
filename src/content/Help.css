@@ -1,0 +1,81 @@
+.help_container {
+  position: absolute;
+  width: 35vw;
+  height: fit-content;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(49,110,230);
+  overflow: hidden;
+}
+
+.help_header {
+  display: flex;
+  align-items: center;
+  height: 5em;
+  width: 100%;
+  border-bottom: 3px solid white;
+  padding-bottom: 5px;
+  color: orange;
+  padding-bottom: 1px;
+}
+
+.help_header .title {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help_header .exit {
+  position: absolute;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.help_header_icon {
+  font-size: 3em;
+  padding: 10px 0px;
+  margin: 0;
+  margin-left: 15px;
+}
+
+.help_header .exit button {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  font-weight: bold;
+  border-radius: 25%;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.help_header .exit button:hover {
+  background-color: rgb(39, 88, 187);
+  border: 1px solid rgb(39, 88, 187);
+  box-shadow: inset 0 0 10px rgb(9, 20, 43);
+}
+
+.help_content {
+  padding: 2em;
+  height: 80%;
+  width: 75%;
+  word-wrap: wrap;
+}
+
+.help_content h3 {
+  color: white;
+  text-align: center;
+}
+
+.help_content p {
+  text-align: left;
+  color: white;
+}

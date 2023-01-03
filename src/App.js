@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MapView from "@arcgis/core/views/MapView";
+import WebMap from "@arcgis/core/WebMap";
+import Start from "./content/Start";
+import Topbar from "./components/Topbar";
+import Viewer from "./content/Viewer";
+import Help from "./content/Help";
+
+import "./App.css";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app_container">
+      <Topbar />
+      <div className="app_content">
+        <Start />
+        <Viewer />
+        <Help />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,22 @@
+.help_button_container {
+  width: 25vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+}
+
+.help_button_icon {
+  font-size: 0.5em;
+  text-align: left;
+  margin-left: 0.25em;
+  line-height: 15px;
+}
+
+.help_button_container:hover {
+  color: orange;
+  cursor: pointer;
+}
