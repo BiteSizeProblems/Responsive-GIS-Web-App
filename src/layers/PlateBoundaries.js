@@ -5,10 +5,10 @@ import SimpleRenderer from "@arcgis/core/renderers/SimpleRenderer";
 const renderer = new SimpleRenderer({
   symbol: {
     type: "simple-line",
-    color: "dodgerblue",
+    color: "black",
     outline: {
       color: 'red',
-      width: 1
+      width: 15
     },
   }
 });

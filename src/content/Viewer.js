@@ -20,7 +20,7 @@ function Viewer() {
   const [view, setView] = useState();
 
   useEffect(() => {
-    const myMap = new WebMap({basemap: {portalItem: { id: "33ea4550c8144e66847d902e4766c2f7" }}, layers: [  ]});
+    const myMap = new WebMap({basemap: {portalItem: { id: "ccbfec91e19d4f9fb0769af361c31516" }}, layers: [  ]});
 
     const myView = new SceneView({
         container: mapRef.current,
@@ -28,7 +28,9 @@ function Viewer() {
         zoom: 1,
     }).when((view) => setView(view)); 
 
-    myView.then(() => console.log('View is ready...'));
+    myView.then(() => console.log(Earthquakes.loaded));
+
+    
 
     $('#Earthquakes').on('click', function(){ ChangeLayer( '#Earthquakes', myMap, Earthquakes) });
     $('#AirPollution').on('click', function(){ ChangeLayer( '#AirPollution', myMap, AirPollution) });

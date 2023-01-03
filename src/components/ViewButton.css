@@ -78,3 +78,7 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.tooltip:hover .react-switch-icon {
+  color: orange;
+}

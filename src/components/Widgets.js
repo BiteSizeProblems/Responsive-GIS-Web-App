@@ -14,6 +14,7 @@ const Widgets = ({ view }) => {
         view.ui.add( new BasemapToggle({ view: view }), "top-right" );
 
         view.ui.add( new AreaMeasurement3D({ view: view }), "bottom-left" );
+
     }, []);
 
     return null;

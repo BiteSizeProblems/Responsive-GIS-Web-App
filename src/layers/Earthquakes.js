@@ -1,43 +1,67 @@
 import GeoJSONLayer from "@arcgis/core/layers/GeoJSONLayer";
-import SimpleRenderer from "@arcgis/core/renderers/SimpleRenderer";
 
-const renderer = new SimpleRenderer({
-  symbol: {
-    type: "simple-marker",
-    color: "dodgerblue",
-    outline: {
-      color: [0, 0, 0, 0.5],
-      width: 1
-    },
-    size: 7.5
-  },
-  visualVariables: [
+const baseSymbolLayer = {
+  type: "icon",
+  resource: {primitive:"circle"},
+  material:{color:[192,29,96,0.9]},
+  size:3
+}
+
+const secondSymbolLayer = {
+  type: "icon",
+  resource: {primitive: "circle"},
+  material: {color: [245,116,73,0.15]},
+  outline: {color: [245,116,73,0.7], size: 1},
+  size: 20
+}
+
+const thirdSymbolLayer = {
+  type: "icon",
+  resource: {primitive: "circle"},
+  material: {color: [245,116,73,0.15]},
+  outline: {color: [245,116,73,0.5], size: 1},
+  size: 40
+}
+
+let renderer = {
+  type: "class-breaks",
+  field: "mag",
+  classBreakInfos: [
     {
-      type: "color",
-      field: "MAG",
-      stops: [
-        { value: 1, color: "#A6F55D" },  
-        { value: 2, color: "#3B7902" },
-        { value: 3, color: "#FBD004" },
-        { value: 4, color: "#C1A001" },
-        { value: 5, color: "#F96C00" },
-        { value: 6, color: "#A24701" },
-        { value: 7, color: "#FF0F04" },
-        { value: 8, color: "#B30B03" },
-        { value: 9, color: "#6F0802" },
-        { value: 10, color: "#21130d" },
-      ]
+      minValue: -2,
+      maxValue: 5,
+      symbol: {
+        type: "point-3d",
+        symbolLayers: [
+          baseSymbolLayer
+        ]
+      }
     },
     {
-      type: "size",
-      field: "MAG",
-      minDataValue: 1,
-      maxDataValue: 10,
-      minSize: 1,
-      maxSize: 10
+      minValue: 5,
+      maxValue: 7,
+      symbol: {
+        type: "point-3d",
+        symbolLayers: [
+          baseSymbolLayer,
+          secondSymbolLayer
+        ]
+      }
+    },
+    {
+      minValue: 7,
+      maxValue: 10,
+      symbol: {
+        type: "point-3d",
+        symbolLayers: [
+          baseSymbolLayer,
+          secondSymbolLayer,
+          thirdSymbolLayer
+        ]
+      }
     }
   ]
-});
+};
 
 const PopupTemplate = {
   title: "{PLACE}",
@@ -68,8 +92,5 @@ const Earthquakes = new GeoJSONLayer({
 });
 
 Earthquakes.popupTemplate = PopupTemplate;
-
-Earthquakes.effect = "bloom(1.3, 0.1px, 15%)";
-
 
 export default Earthquakes;

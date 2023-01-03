@@ -1,51 +1,46 @@
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 
-const less1m = {
-  type: "simple-marker",
-  color: "#009933",
-  style: "solid",
-  size: 2,
-
-};
-
 const less5m = {
   type: "simple-marker",
-  color: "#cccc00",
-  style: "solid",
-  size: 3,
-
+  color: "rgb(243,211,243, 0.5)",
+  style: "circle",
+  size: 10,
+  outline: {
+    width: 250,
+    color: [243, 211, 243, 0.75]
+  }
 };
 
 const less10m = {
   type: "simple-marker",
-  color: "#ff9900",
-  style: "solid",
-  size: 4,
+  color: "rgb(250,176,251, 0.75)",
+  style: "circle",
+  size: 10,
   outline: {
-    width: 10,
-    color: [102, 102, 153, 0.2]
+    width: 500,
+    color: [250, 176, 251, 0.75]
   }
 };
 
 const less20m = {
   type: "simple-marker",
-  color: "#ff0000",
-  style: "solid",
-  size: 6,
+  color: "rgb(162,100,253, 0.75)",
+  style: "circle",
+  size: 10,
   outline: {
-    width: 10,
-    color: [102, 102, 153, 0.2]
+    width: 750,
+    color: [162, 100, 253, 0.75]
   }
 };
 
 const more20m = {
   type: "simple-marker",
-  color: "#cc00ff",
-  style: "solid",
-  size: 8,
+  color: "rgb(25,16,217, 0.75)",
+  style: "circle",
+  size: 10,
   outline: {
-    width: 10,
-    color: [102, 102, 153, 0.2]
+    width: 1000,
+    color: [25, 16, 217, 0.75]
   }
 };
 
@@ -54,19 +49,13 @@ const renderer = {
   field: "POP",
   classBreakInfos: [
     {
-      minValue: 0,
-      maxValue: 999999,
-      symbol: less1m,
-      label: "< 1m"
-    },
-    {
       minValue: 1000000,
       maxValue: 4999999,
       symbol: less5m,
       label: "< 5m"
     },
     {
-      minValue: 5000000,
+      minValue: 5000000, 
       maxValue: 9999999,
       symbol: less10m,
       label: "< 10m"
@@ -85,6 +74,8 @@ const renderer = {
     }
   ]
 };
+
+
   
   const PopupTemplate = {
     title: "{CITY_NAME}, {CNTRY_NAME}",
@@ -94,15 +85,19 @@ const renderer = {
         fieldInfos: [
           {
             fieldName: "STATUS",
-            label: "City Type"
+            label: "Type"
           },
           {
             fieldName: "POP",
-            label: "Population"
+            label: "Population",
+            format: {
+              "places": 0,
+              "digitSeparator": true
+            }
           },
           {
             fieldName: "POP_RANK",
-            label: "Population Rank"
+            label: "Ranked Group"
           }
         ]
       }
@@ -111,7 +106,7 @@ const renderer = {
 
 const Cities = new FeatureLayer({
     url: "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Cities/FeatureServer",
-    renderer: renderer
+    renderer: renderer,
 });
 
 Cities.popupTemplate = PopupTemplate;
