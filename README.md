@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# Natural Disasters: Responsive GIS Web Application
+#### Built with ReactJS and ESRI's ArcGIS framework.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br/>
 
-## Available Scripts
+This project was originally completed while I was studying for my master's degree. Since then, I've taken the opportunity to update the site to feature more responsive components and interactivity.
 
-In the project directory, you can run:
+<br/>
 
-### `npm start`
+## Features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Responsive Components:
 
-### `npm test`
+Adjusting for different devices to ensure the application runs well on desktop and mobile devices. Switching between column and row alignments allowed the content to maximise the available space.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
 
-### `npm run build`
+<div align="center">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <img src="https://user-images.githubusercontent.com/97358081/210432083-e0ef05e2-3252-4ef8-bfee-2249c8645cd7.png" alt="gis_home" style="width:75%">
+  
+  <br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <img src="https://user-images.githubusercontent.com/97358081/210432034-3b3e1e3b-4c8d-40fa-89a3-485643b3b13a.png" alt="gis_mobile" >
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</div>
 
-### `npm run eject`
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Real-Time Data Streams:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application utilizes data from multiple sources including government agencies, academic institutions, and private organizations.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Using customized switch/toggle buttons rather than checkboxes improved the aesthetics of the navigation bar.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br/>
 
-## Learn More
+#### Original/Current:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<div align="center">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  <img src="https://user-images.githubusercontent.com/97358081/204344662-7142fcba-95be-4763-b0ab-3b6172520abe.png" alt="gis_topbar_old" style="width:75%" >
+  
+  <br/>
+  
+  <img src="https://user-images.githubusercontent.com/97358081/210435030-80e346c4-f17c-4885-ad06-6f072399d51d.png" alt="gis_topbar" style="width:75%" >
 
-### Code Splitting
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br/>
 
-### Analyzing the Bundle Size
+### Alternate Surface Layer:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+An alternate surface layer can be projected to the visualization by selecting the layer widget in the top right corner.
 
-### Making a Progressive Web App
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<div align="center">
+  
+  <img src="https://user-images.githubusercontent.com/97358081/210436537-72ed8909-33c9-4802-8f17-edffa44cf778.png" alt="gis_alt_scene" style="width:75%" >
 
-### Advanced Configuration
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<br/>
 
-### Deployment
+### Helper Modal and Backdrop:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+By clicking the '?' icon in the upper right hand corner of the application, users can open a modal for additional content. The modal dims components in the background and can be closed by clicking the exit button on the modal or by simply clicking the backdrop.
 
-### `npm run build` fails to minify
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+
+  <img src="https://user-images.githubusercontent.com/97358081/210439035-c819eb09-208e-4639-8173-a32b1f831adf.png" alt="gis_alt_scene" style="width:75%" >
+
+</div>
+
+<br/>
+
+### Views:
+
+5 unique feature views allow users to visualize recent events in earthquake and tectonic plate activity, global city populations, air pollution, and cyclone activity throughout the world.
+
+The images below display the development progress between the original and current versions of the application:
+
+<br/>
+
+#### Earthquakes & Tectonic Plate Activity:
+
+<br/>
+
+<div align="center">
+
+  <img src="https://user-images.githubusercontent.com/97358081/204343679-6c3d6050-48de-4116-a956-9375bfe9d6cf.png" alt="gis_earthquakes_old" style="width:75%" >
+  
+  <br/>
+  
+  <img src="https://user-images.githubusercontent.com/97358081/210435030-80e346c4-f17c-4885-ad06-6f072399d51d.png" alt="gis_topbar" style="width:75%" >
+
+</div>
+
+<br/>
+
+#### Air Pollution & City Population:
+
+<br/>
+
+<div align="center">
+
+  <img src="https://user-images.githubusercontent.com/97358081/204345484-676768ab-8202-4cde-9ded-ff51b331550d.png" alt="gis_air_pollution_old" style="width:75%" >
+  
+  <br/>
+  
+  <img src="https://user-images.githubusercontent.com/97358081/204345925-75c44970-9319-4848-9835-df921ae9b430.png" alt="gis_cities_old" style="width:75%" >
+  
+  <br/>
+
+  <img src="https://user-images.githubusercontent.com/97358081/210438669-dd7739f4-764c-4c45-8d41-be6c25f32861.png" alt="gis_air_pollution" style="width:75%" >
+
+</div>
+
+<br/>
+
+### Other Tools:
+
+Users have additional tools at their disposal to improve their experience including zoom, compass, rotation, and legend widgets.
+
+Additionally, users can utilize the measurement widget in the bottom left corner of the application to measure the surface area of a location or geographic landmark.
+
+<br/>
+
+<div align="center">
+
+  <img src="https://user-images.githubusercontent.com/97358081/210439816-b4b27c27-3ece-4159-a9c0-92f017815c0b.png" alt="gis_measurements" style="width:75%" >
+
+</div>
+
+<br/>
+
+## How-To
+
+<br/>
+
+### Run the application:
+
+Type the following into a terminal in the local directory.
+
+- `npm i`
+- `npm start`
+
+If the application does not automatically open in your browser, enter [http://localhost:3000](http://localhost:3000) directly in the URL input box.
