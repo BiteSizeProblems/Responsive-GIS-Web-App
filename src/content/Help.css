@@ -8,6 +8,8 @@
   align-items: center;
   background-color: rgb(49,110,230);
   overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 0 150px rgb(9, 20, 43);
 }
 
 .help_header {

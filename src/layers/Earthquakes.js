@@ -79,7 +79,7 @@ const PopupTemplate = {
         },
         {
           fieldName: "TSUNAMI",
-          label: "TSUNAMI"
+          label: "Tsunami"
         }
       ]
     }

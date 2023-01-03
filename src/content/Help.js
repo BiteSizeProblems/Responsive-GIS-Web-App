@@ -11,21 +11,19 @@ function Help() {
   useEffect(() => {
 
     $('#help-button').on('click', function(){ setVisibility(!visibility) });
+    $('#help_exit').on('click', function(){ setVisibility(false) });
+    $('#backdrop_div').on('click', function(){ setVisibility(false) });
 
   }, []);
 
-  function exitHelp() {
-    setVisibility(false)
-  }
-
   return (
-    <div className="help_container" style={{visibility: visibility === true ? 'visible' : 'hidden'}}>
+    <div id="help_modal" className="help_container" style={{visibility: visibility === true ? 'visible' : 'hidden'}}>
       <div className="help_header">
         <div className="title">
           <FiHelpCircle className="help_header_icon"/>
         </div>
         <div className="exit">
-          <button onClick={() => exitHelp()}>X</button>
+          <button id="help_exit">X</button>
         </div>
       </div>
       <div className="help_content">
