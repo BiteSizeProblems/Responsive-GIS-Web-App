@@ -29,15 +29,15 @@ Adjusting for different devices to ensure the application runs well on desktop a
 
 <br/>
 
-### Real-Time Data Streams:
+### Navigation and Interaction:
 
-The application utilizes data from multiple sources including government agencies, academic institutions, and private organizations.
+The first design of the application featured a sidebar for view controls and checkboxes to select map layers. In the newest design, I developed a switch component that would be used to toggle each map layer. The switch component improved the overall aesthetics of the application and utilizing tooltips and icons within the components improved the functionality for new users.
 
-Using customized switch/toggle buttons rather than checkboxes improved the aesthetics of the navigation bar.
+The first design featured a sidebar rather than a topbar. As most users of GIS software access sites on a laptop or desktop computer, their screens were often wider than they were tall, and I had assumed a sidebar would prevent reducing the already limited height.
+
+However, in the comparison below, moving navigation from the side to the top actually reduced the 'wasted space' and any reduction in the height of interactive components remained minimal. The end result provided a clean, minimalist experience that was easier to navigate and interact with.
 
 <br/>
-
-#### Original/Current:
 
 <div align="center">
 
@@ -48,6 +48,12 @@ Using customized switch/toggle buttons rather than checkboxes improved the aesth
   <img src="https://user-images.githubusercontent.com/97358081/210435030-80e346c4-f17c-4885-ad06-6f072399d51d.png" alt="gis_topbar" style="width:75%" >
 
 </div>
+
+<br/>
+
+### Real-Time Data Streams:
+
+The application utilizes data from multiple sources including government agencies, academic institutions, and private organizations.
 
 <br/>
 
